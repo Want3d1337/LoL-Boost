@@ -1,0 +1,30 @@
+<div id="card">
+    <div id="card-content">
+      <div id="card-title">
+        <h2>LOGIN</h2>
+        <div class="underline-title"></div>
+      </div>
+      <form method="post" class="form">
+        <label for="user-email" style="padding-top:13px">
+            &nbsp;Email
+          </label>
+          <div class="formGroup">
+          <input type="text" class="formControl" placeholder="Email" #userEmail required>
+          </div>
+        <div class="form-border"></div>
+        <label for="user-password" style="padding-top:22px">&nbsp;Password
+          </label>
+          <div class="formGroup">
+          <input type="password" class="formControl" placeholder="Password" #userPassword required>
+          </div>
+        <div class="form-border"></div>
+        <a href="#">
+          <legend id="forgot-pass">Forgot password?</legend>
+        </a>
+        <div class="formGroup">
+            <input type="button" class="btn btnPrimary" value="LOGIN" (click)="authenticationService.SignIn(userEmail.value, userPassword.value)">
+        </div>
+        <a href="/register" id="signup">Don't have an account yet?</a>
+      </form>
+    </div>
+</div>
